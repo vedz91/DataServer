@@ -26,6 +26,7 @@ To see your applications health enter url `http://localhost:8081/healthcheck`
 - [x] Configure jUnit @ 5
 - [ ] Setup CI
 - [ ] Setup Authentication
+- [ ] [Dockerize App](https://xebia.com/blog/how-to-dockerize-your-dropwizard-application/)
 
 ## Nice To Have
 - [ ] Enable PMD
