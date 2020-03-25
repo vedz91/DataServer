@@ -1,6 +1,8 @@
 package org.ServerInteractionDemo;
 
+import org.ServerInteractionDemo.api.exceptions.mappers.InvalidOperandExceptionMapper;
 import org.ServerInteractionDemo.health.ConfigurationHealthCheck;
+import org.ServerInteractionDemo.resources.OperationResource;
 import org.ServerInteractionDemo.resources.StaticResource;
 
 import io.dropwizard.Application;
@@ -25,7 +27,7 @@ public class DataServerApplication extends Application<DataServerConfiguration> 
         // TODO: application initialization
         bootstrap.addBundle(new SwaggerBundle<DataServerConfiguration>() {
             @Override
-            protected SwaggerBundleConfiguration getSwaggerBundleConfiguration(DataServerConfiguration configuration) {
+            protected SwaggerBundleConfiguration getSwaggerBundleConfiguration(final DataServerConfiguration configuration) {
                 return configuration.swaggerBundleConfiguration;
             }
         });
@@ -34,9 +36,17 @@ public class DataServerApplication extends Application<DataServerConfiguration> 
     @Override
     public void run(final DataServerConfiguration configuration,
                     final Environment env) {
-        // TODO: implement application
-        env.healthChecks().register("ConfigurationHealthCheck", ConfigurationHealthCheck.builder().serverConfiguration(configuration.getServer()).build());
+        // HEALTH Check
+        env.healthChecks()
+           .register("ConfigurationHealthCheck",
+                     ConfigurationHealthCheck.builder().serverConfiguration(configuration.getServer()).build());
+
+        // EXCEPTION MAPPERS
+        env.jersey().register(new InvalidOperandExceptionMapper(env.metrics()));
+
+        // RESOURCES
         env.jersey().register(StaticResource.class);
+        env.jersey().register(OperationResource.class);
 
     }
 
