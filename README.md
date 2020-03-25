@@ -19,7 +19,9 @@ To see your applications health enter url `http://localhost:8081/healthcheck`
 - [x] Create a [fat jar](https://www.baeldung.com/executable-jar-with-maven)
 - [x] Integrate Lombok
 - [ ] Integrate Endpoint which will perform Multiplication
-- [ ] Integrate Swagger
+- [x] Integrate Swagger
+- [x] Test sf4j application logging
+- [ ] Maven exec plugin: exec-maven-plugin
 - [ ] Configure jUnit
 - [ ] Setup CI
 - [ ] Setup Authentication

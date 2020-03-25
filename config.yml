@@ -9,3 +9,9 @@ logging:
   level: INFO
   loggers:
     org.ServerInteractionDemo: DEBUG
+swagger:
+  resourcePackage: org.ServerInteractionDemo.resources
+  title: Data Server
+  version: 1.0-SNAPSHOT
+  description:
+  contact: vedang91@gmail.com
