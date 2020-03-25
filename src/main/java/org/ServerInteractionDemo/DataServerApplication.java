@@ -1,5 +1,7 @@
 package org.ServerInteractionDemo;
 
+import org.ServerInteractionDemo.resources.DataResource;
+
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
 import io.dropwizard.setup.Environment;
@@ -22,8 +24,10 @@ public class DataServerApplication extends Application<DataServerConfiguration> 
 
     @Override
     public void run(final DataServerConfiguration configuration,
-                    final Environment environment) {
+                    final Environment env) {
         // TODO: implement application
+        env.jersey().register(DataResource.class);
+
     }
 
 }
