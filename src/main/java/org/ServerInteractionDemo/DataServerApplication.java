@@ -1,6 +1,7 @@
 package org.ServerInteractionDemo;
 
-import org.ServerInteractionDemo.resources.DataResource;
+import org.ServerInteractionDemo.health.ConfigurationHealthCheck;
+import org.ServerInteractionDemo.resources.StaticResource;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -26,7 +27,8 @@ public class DataServerApplication extends Application<DataServerConfiguration> 
     public void run(final DataServerConfiguration configuration,
                     final Environment env) {
         // TODO: implement application
-        env.jersey().register(DataResource.class);
+        env.healthChecks().register("ConfigurationHealthCheck", ConfigurationHealthCheck.builder().serverConfiguration(configuration.getServer()).build());
+        env.jersey().register(StaticResource.class);
 
     }
 

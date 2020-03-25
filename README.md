@@ -17,7 +17,7 @@ To see your applications health enter url `http://localhost:8081/healthcheck`
 ## To Do
 - [x] Create a Static Endpoint
 - [x] Create a [fat jar](https://www.baeldung.com/executable-jar-with-maven)
-- [ ] Integrate Lombok
+- [x] Integrate Lombok
 - [ ] Integrate Endpoint which will perform Multiplication
 - [ ] Integrate Swagger
 - [ ] Configure jUnit

@@ -4,8 +4,8 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.core.Response;
 
-@Path("/content")
-public class DataResource {
+@Path("/static")
+public class StaticResource {
 
     @GET
     public Response getData() {
