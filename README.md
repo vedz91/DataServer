@@ -22,7 +22,7 @@ To see your applications health enter url `http://localhost:8081/healthcheck`
 - [x] Integrate Swagger
 - [x] Test sf4j application logging
 - [ ] Maven exec plugin: exec-maven-plugin
-- [ ] Configure jUnit
+- [x] Configure jUnit @ 5
 - [ ] Setup CI
 - [ ] Setup Authentication
 
