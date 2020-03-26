@@ -24,7 +24,7 @@ To see your applications health enter url `http://localhost:8081/healthcheck`
 - [x] Implement custom exception Handler
 - [ ] Maven exec plugin: exec-maven-plugin
 - [x] Configure jUnit @ 5
-- [ ] Setup CI
+- [x] Setup CI
 - [ ] Setup Authentication
 - [ ] [Dockerize App](https://xebia.com/blog/how-to-dockerize-your-dropwizard-application/)
 
