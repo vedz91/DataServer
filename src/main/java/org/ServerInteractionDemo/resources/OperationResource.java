@@ -19,7 +19,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiParam;
 
 @Path("/operation")
-@Api("Data OperationType")
+@Api(SwaggerLiterals.OR_API)
 public class OperationResource {
 
     //todo: make default type configurable
