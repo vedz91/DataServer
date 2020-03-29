@@ -8,13 +8,18 @@ How to start the DataServer application
 1. Start application with `java -jar target/DataServer-1.0-SNAPSHOT.jar server config.yml`
 1. To check that your application is running enter url `http://localhost:9000/static`
 
-Health Check
----
-
-To see your applications health enter url `http://localhost:8081/healthcheck`
+## Health Check
 
 
-## To Do
+To see your applications health enter url `http://localhost:9001/healthcheck`
+
+### Test Coverage
+Current coverage is `58%`. 
+
+![Coverage](coverage.png)
+
+Browse `target/jacoco.exe` for more details.
+### To Do
 - [x] Create a Static Endpoint
 - [x] Create a [fat jar](https://www.baeldung.com/executable-jar-with-maven)
 - [x] Integrate Lombok
@@ -22,12 +27,11 @@ To see your applications health enter url `http://localhost:8081/healthcheck`
 - [x] Integrate Swagger
 - [x] Test sf4j application logging
 - [x] Implement custom exception Handler
-- [ ] Maven exec plugin: exec-maven-plugin
 - [x] Configure jUnit @ 5
 - [x] Setup CI
-- [ ] Setup Authentication
-- [ ] [Dockerize App](https://xebia.com/blog/how-to-dockerize-your-dropwizard-application/)
+- [x] [Dockerize App](https://xebia.com/blog/how-to-dockerize-your-dropwizard-application/)
+- [x] Integrate Jacoco Coverage
 
-## Nice To Have
+### Nice To Have
 - [ ] Enable PMD
 - [ ] Enable Bugzilla  

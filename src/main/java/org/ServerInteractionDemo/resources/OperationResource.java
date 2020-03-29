@@ -30,8 +30,8 @@ public class OperationResource {
     @Produces(MediaType.APPLICATION_JSON)
     public OperationResponse compute(
             @QueryParam("type") @ApiParam(defaultValue = "MULTIPLY") final Optional<OperationType> type,
-            @QueryParam("opperand1") @ApiParam(required = true) final Double valA,
-            @QueryParam("opperand2") @ApiParam(required = true) final Double valB) {
+            @QueryParam("operand1") @ApiParam(required = true) final Double valA,
+            @QueryParam("operand2") @ApiParam(required = true) final Double valB) {
 
         final Operation operation = OperationFactory.getOperation(type.orElse(this.DEFAULT_TYPE), valA, valB);
         operation.validate();

@@ -1,0 +1,23 @@
+server:
+  applicationConnectors:
+    - type: http
+      port: 9000
+  adminConnectors:
+    - type: http
+      port: 9001
+logging:
+  level: INFO
+  appenders:
+    - type: file
+      currentLogFilename: ./logs/data-server.log
+      archivedLogFilenamePattern: ./logs/example-%d.log.gz
+      archivedFileCount: 5
+      timeZone: UTC
+  loggers:
+    org.ServerInteractionDemo: DEBUG
+swagger:
+  resourcePackage: org.ServerInteractionDemo.resources
+  title: Data Server
+  version: 1.0-SNAPSHOT
+  description:
+  contact: vedang91@gmail.com

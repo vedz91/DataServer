@@ -3,7 +3,6 @@ package org.ServerInteractionDemo;
 import org.ServerInteractionDemo.api.exceptions.mappers.InvalidOperandExceptionMapper;
 import org.ServerInteractionDemo.health.ConfigurationHealthCheck;
 import org.ServerInteractionDemo.resources.OperationResource;
-import org.ServerInteractionDemo.resources.StaticResource;
 
 import io.dropwizard.Application;
 import io.dropwizard.setup.Bootstrap;
@@ -45,7 +44,6 @@ public class DataServerApplication extends Application<DataServerConfiguration> 
         env.jersey().register(new InvalidOperandExceptionMapper(env.metrics()));
 
         // RESOURCES
-        env.jersey().register(StaticResource.class);
         env.jersey().register(OperationResource.class);
 
     }
